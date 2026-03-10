@@ -17,11 +17,22 @@ public class Main {
         int edadUsuario = teclado.nextInt(); 
         teclado.nextLine(); // Limpiamos el "Enter" que queda flotando (truco clásico de Java)
         
+        while (edadUsuario <= 0) {
+        	System.out.print("Error, Ingrese la edad del paciente: ");
+            edadUsuario = teclado.nextInt(); 
+            teclado.nextLine();
+        }
+        
         System.out.print("Ingrese el nivel de amputación (ej. Pierna derecha baja): ");
         String amputacionUsuario = teclado.nextLine();
         
         System.out.print("Ingrese el peso en kg (use coma para decimales): ");
         double pesoUsuario = teclado.nextDouble(); 
+        
+        while (pesoUsuario <= 0) {
+        	System.out.print("Error, Ingrese el peso en kg(use coma para decimales): ");
+        	pesoUsuario = teclado.nextDouble();
+        }
 
         Paciente tio = new Paciente(nombreUsuario, edadUsuario, amputacionUsuario, pesoUsuario);
 
