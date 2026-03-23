@@ -30,7 +30,7 @@ public class Analizador {
 		    PrintWriter escritor = new PrintWriter(archivo);
 
 		    //Texto de prueba CAMBIAR
-		    escritor.println("Pasos Críticos; " + cantPasosCriticos);
+		    escritor.println("Pasos Criticos; " + cantPasosCriticos);
 
 		    // Siempre hay que cerrar el archivo para que los cambios se guarden de verdad
 		    escritor.close();
